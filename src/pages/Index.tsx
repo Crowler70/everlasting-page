@@ -1,16 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import CurtainHero from "@/components/wedding/CurtainHero";
+import NamesHero from "@/components/wedding/NamesHero";
+import Countdown from "@/components/wedding/Countdown";
+import Venue from "@/components/wedding/Venue";
+import MenuCard from "@/components/wedding/MenuCard";
+import DressCode from "@/components/wedding/DressCode";
+import Gifts from "@/components/wedding/Gifts";
+import Transport from "@/components/wedding/Transport";
+import RSVPForm from "@/components/wedding/RSVPForm";
+import ThankYou from "@/components/wedding/ThankYou";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [curtainOpen, setCurtainOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-cream overflow-x-hidden">
+      <CurtainHero isOpen={curtainOpen} onOpen={() => setCurtainOpen(true)} />
+      <NamesHero />
+      <Countdown />
+      <Venue />
+      <MenuCard />
+      <DressCode />
+      <Gifts />
+      <Transport />
+      <RSVPForm />
+      <ThankYou />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
