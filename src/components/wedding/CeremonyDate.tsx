@@ -9,8 +9,13 @@ const events = [
   { time: "9:00 PM", title: "Dance & Party", detail: "Music & merriment" },
 ];
 
-const CeremonyDate = () => {
+const CeremonyDate = ({ onReveal }: { onReveal?: () => void }) => {
   const [revealed, setRevealed] = useState(false);
+
+  const handleReveal = () => {
+    setRevealed(true);
+    onReveal?.();
+  };
 
   return (
     <section className="py-20 px-6 bg-cream relative overflow-hidden min-h-[60vh] flex flex-col items-center justify-center">

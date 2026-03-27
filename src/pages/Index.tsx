@@ -13,20 +13,25 @@ import ThankYou from "@/components/wedding/ThankYou";
 
 const Index = () => {
   const [curtainOpen, setCurtainOpen] = useState(false);
+  const [dateRevealed, setDateRevealed] = useState(false);
 
   return (
-    <div className="min-h-screen bg-cream overflow-x-hidden">
+    <div className={`min-h-screen bg-cream overflow-x-hidden ${!dateRevealed ? 'max-h-screen overflow-y-hidden' : ''}`}>
       <CurtainHero isOpen={curtainOpen} onOpen={() => setCurtainOpen(true)} />
       <NamesHero />
-      <CeremonyDate />
-      <Countdown />
-      <Venue />
-      <MenuCard />
-      <DressCode />
-      <Gifts />
-      <Transport />
-      <RSVPForm />
-      <ThankYou />
+      <CeremonyDate onReveal={() => setDateRevealed(true)} />
+      {dateRevealed && (
+        <>
+          <Countdown />
+          <Venue />
+          <MenuCard />
+          <DressCode />
+          <Gifts />
+          <Transport />
+          <RSVPForm />
+          <ThankYou />
+        </>
+      )}
     </div>
   );
 };
