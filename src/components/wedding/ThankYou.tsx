@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ThankYou = () => {
   return (
-    <section className="py-24 px-6 bg-cream flex items-center justify-center">
+    <section className="py-12 px-6 bg-cream flex items-center justify-center">
       <motion.div
         className="relative max-w-sm mx-auto text-center"
         initial={{ opacity: 0, scale: 0.95 }}
@@ -22,7 +22,7 @@ const ThankYou = () => {
               For joining us on this special day. Your presence is the best gift we could receive.
             </p>
             <p className="font-display text-2xl text-burgundy">
-              Sam & Sofía
+              Grace & Thomas
             </p>
           </div>
         </div>

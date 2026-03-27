@@ -26,7 +26,7 @@ const menuItems = [
 
 const MenuCard = () => {
   return (
-    <section className="py-24 px-6 bg-cream-dark">
+    <section className="py-12 px-6 bg-cream-dark">
       <motion.div
         className="max-w-md mx-auto relative"
         initial={{ opacity: 0, y: 30 }}

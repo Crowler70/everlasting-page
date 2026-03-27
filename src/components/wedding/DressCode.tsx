@@ -3,7 +3,7 @@ import dresscodeIllustration from "@/assets/dresscode-illustration.png";
 
 const DressCode = () => {
   return (
-    <section className="py-24 px-6 bg-cream">
+    <section className="py-12 px-6 bg-cream">
       <motion.h2
         className="font-display text-4xl md:text-5xl text-burgundy text-center mb-8"
         initial={{ opacity: 0, y: 20 }}

@@ -7,7 +7,7 @@ const MAP_EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315
 
 const Location = () => {
   return (
-    <section className="py-24 px-6 bg-cream relative overflow-hidden">
+    <section className="py-12 px-6 bg-cream relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>

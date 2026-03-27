@@ -6,7 +6,7 @@ const Gifts = () => {
   const [showDetails, setShowDetails] = useState(false);
 
   return (
-    <section className="py-24 px-6 bg-cream-dark">
+    <section className="py-12 px-6 bg-cream-dark">
       <motion.p
         className="font-sans-wedding text-xs tracking-[0.3em] uppercase text-burgundy/60 text-center mb-4"
         initial={{ opacity: 0 }}

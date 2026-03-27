@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Transport = () => {
   return (
-    <section className="py-24 px-6 bg-cream">
+    <section className="py-12 px-6 bg-cream">
       <motion.p
         className="font-sans-wedding text-xs tracking-[0.3em] uppercase text-burgundy/60 text-center mb-4"
         initial={{ opacity: 0 }}
