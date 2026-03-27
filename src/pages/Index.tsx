@@ -16,7 +16,7 @@ const Index = () => {
   const [dateRevealed, setDateRevealed] = useState(false);
 
   return (
-    <div className={`min-h-screen bg-cream overflow-x-hidden ${!dateRevealed ? 'max-h-screen overflow-y-hidden' : ''}`}>
+    <div className={`min-h-screen bg-cream overflow-x-hidden ${!dateRevealed ? 'overflow-y-auto max-h-none' : ''}`}>
       <CurtainHero isOpen={curtainOpen} onOpen={() => setCurtainOpen(true)} />
       <NamesHero />
       <CeremonyDate onReveal={() => setDateRevealed(true)} />
