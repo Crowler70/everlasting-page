@@ -36,13 +36,13 @@ const Venue = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <h2 className="font-display text-3xl md:text-4xl text-burgundy mb-4">
-          Villa Medicea di Artimino
+          Vinterra Estate
         </h2>
         <p className="font-sans-wedding text-xs tracking-[0.2em] uppercase text-burgundy/60 mb-1">
-          Via di Papa Leone X, 28
+          2000 Silverado Trail
         </p>
         <p className="font-sans-wedding text-xs tracking-[0.2em] uppercase text-burgundy/60 mb-6">
-          Artimino, Florencia
+          Napa, California
         </p>
         <p className="font-body text-xl text-burgundy">September 10, 2027</p>
         <p className="font-body text-lg italic text-burgundy/60 mt-2">

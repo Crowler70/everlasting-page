@@ -5,7 +5,7 @@ const NamesHero = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-6 bg-cream relative">
       <motion.p
-        className="font-sans-wedding text-xs tracking-[0.35em] uppercase text-burgundy mb-8"
+        className="font-sans-wedding text-xs tracking-[0.35em] uppercase text-burgundy mb-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -21,7 +21,7 @@ const NamesHero = () => {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.3 }}
       >
-        Sam
+        Grace
       </motion.h1>
 
       <motion.span
@@ -41,7 +41,7 @@ const NamesHero = () => {
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 0.9 }}
       >
-        Sofía
+        Thomas
       </motion.h1>
 
       <motion.p

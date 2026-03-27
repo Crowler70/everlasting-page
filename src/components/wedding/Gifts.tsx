@@ -78,13 +78,16 @@ const Gifts = () => {
             transition={{ duration: 0.4 }}
           >
             <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
-              Account Holder: Sam & Sofia
+              Account Holder: Grace & Thomas
             </p>
             <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
-              IBAN: ES00 0000 0000 0000 0000 0000
+              Routing Number: XXXXXXXX
             </p>
             <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
-              Reference: Sam & Sofia Wedding
+              Account Number: XXXXXXXXX
+            </p>
+            <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
+              Reference: Grace & Thomas Wedding
             </p>
           </motion.div>
         )}

@@ -8,6 +8,7 @@ import MenuCard from "@/components/wedding/MenuCard";
 import DressCode from "@/components/wedding/DressCode";
 import Gifts from "@/components/wedding/Gifts";
 import Transport from "@/components/wedding/Transport";
+import Location from "@/components/wedding/Location";
 import RSVPForm from "@/components/wedding/RSVPForm";
 import ThankYou from "@/components/wedding/ThankYou";
 
@@ -28,6 +29,7 @@ const Index = () => {
           <DressCode />
           <Gifts />
           <Transport />
+          <Location />
           <RSVPForm />
           <ThankYou />
         </>

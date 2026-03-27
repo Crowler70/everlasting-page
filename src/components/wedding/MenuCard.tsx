@@ -3,24 +3,24 @@ import dinnerIllustration from "@/assets/dinner-illustration.png";
 
 const menuItems = [
   {
-    title: "Aperitivo",
-    main: "Selección de antipasti toscanos",
-    detail: "Bruschetta, crostini & affettati misti",
+    title: "Cocktail Hour",
+    main: "Artisan Appetizers",
+    detail: "Bruschetta, cheese boards & seasonal crudités",
   },
   {
-    title: "Primo",
-    main: "Risotto al tartufo nero di Norcia",
-    detail: "con parmigiano reggiano 24 mesi",
+    title: "First Course",
+    main: "Caesar Salad",
+    detail: "with house-made croutons and parmesan",
   },
   {
-    title: "Secondo",
-    main: "Filetto di manzo alla griglia",
-    detail: "con salsa al vino rosso e verdure di stagione",
+    title: "Main Course",
+    main: "Filet Mignon",
+    detail: "with red wine reduction and seasonal vegetables",
   },
   {
-    title: "Dolce",
-    main: "Torta nuziale con crema di mascarpone",
-    detail: "e frutti di bosco freschi",
+    title: "Dessert",
+    main: "Wedding Cake",
+    detail: "with fresh berry compote and vanilla cream",
   },
 ];
 
@@ -71,7 +71,7 @@ const MenuCard = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              Vini della Tenuta
+              Premium Wine Selection
             </motion.p>
           </div>
 
