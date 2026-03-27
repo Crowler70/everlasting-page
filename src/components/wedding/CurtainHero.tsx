@@ -19,8 +19,13 @@ const CurtainHero = ({ isOpen, onOpen }: CurtainHeroProps) => {
           {/* Left curtain */}
           <motion.div
             className="absolute inset-y-0 left-0 w-1/2 overflow-hidden"
-            exit={{ x: "-100%" }}
-            transition={{ duration: 1.2, ease: [0.65, 0, 0.35, 1] }}
+            exit={{ x: "-105%", skewY: -2 }}
+            transition={{
+              duration: 1.6,
+              ease: [0.22, 1, 0.36, 1],
+              x: { type: "spring", stiffness: 60, damping: 18, mass: 1.2 },
+              skewY: { duration: 0.8, ease: "easeOut" },
+            }}
           >
             <div
               className="w-[200%] h-full bg-cover bg-center"
@@ -31,8 +36,13 @@ const CurtainHero = ({ isOpen, onOpen }: CurtainHeroProps) => {
           {/* Right curtain */}
           <motion.div
             className="absolute inset-y-0 right-0 w-1/2 overflow-hidden"
-            exit={{ x: "100%" }}
-            transition={{ duration: 1.2, ease: [0.65, 0, 0.35, 1] }}
+            exit={{ x: "105%", skewY: 2 }}
+            transition={{
+              duration: 1.6,
+              ease: [0.22, 1, 0.36, 1],
+              x: { type: "spring", stiffness: 60, damping: 18, mass: 1.2 },
+              skewY: { duration: 0.8, ease: "easeOut" },
+            }}
           >
             <div
               className="w-[200%] h-full bg-cover bg-center -translate-x-1/2"
