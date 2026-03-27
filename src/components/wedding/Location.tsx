@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { MapPin, Navigation } from "lucide-react";
 
 const VENUE_ADDRESS = "Vinterra Estate, 2000 Silverado Trail, Napa, California 94558";
 const GOOGLE_MAPS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(VENUE_ADDRESS)}`;
@@ -7,7 +8,8 @@ const MAP_EMBED_URL = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315
 
 const Location = () => {
   return (
-    <section className="py-12 px-6 bg-cream relative overflow-hidden">
+    <section className="py-12 px-6 bg-cream-dark relative overflow-hidden">
+      {/* Background pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
@@ -26,26 +28,43 @@ const Location = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <motion.p
-          className="font-sans-wedding text-xs tracking-[0.3em] uppercase text-burgundy/60 text-center mb-4"
+        {/* Header with decorative flourish */}
+        <motion.div
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          Find your way
-        </motion.p>
+          {/* Top flourish */}
+          <div className="flex items-center justify-center gap-4 mb-2">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold" />
+            <svg className="w-8 h-8 text-gold" viewBox="0 0 40 40" fill="none">
+              <path d="M20 2C20 2 8 8 8 18C8 25 13 30 20 35C27 30 32 25 32 18C32 8 20 2 20 2Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+              <circle cx="20" cy="18" r="3" fill="currentColor" />
+            </svg>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold" />
+          </div>
 
-        <motion.h2
-          className="font-display text-4xl text-burgundy text-center mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          Location
-        </motion.h2>
+          {/* Subtitle */}
+          <p className="font-sans-wedding text-xs tracking-[0.25em] uppercase text-burgundy/60 mb-2">
+            Find your way
+          </p>
 
+          {/* Title */}
+          <h2 className="font-display text-4xl md:text-5xl text-burgundy">
+            Location
+          </h2>
+
+          {/* Gold line with diamond */}
+          <div className="flex items-center justify-center mt-4">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold" />
+            <div className="w-2 h-2 rotate-45 bg-gold mx-2" />
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold" />
+          </div>
+        </motion.div>
+
+        {/* Map Card - Floating Effect */}
         <motion.div
           className="relative"
           initial={{ opacity: 0, y: 30 }}
@@ -57,10 +76,11 @@ const Location = () => {
           <div className="absolute inset-0 border border-burgundy/10 rounded-2xl" />
           
           <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
-            <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-burgundy/30 rounded-tl-2xl" />
-            <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-burgundy/30 rounded-tr-2xl" />
-            <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-burgundy/30 rounded-bl-2xl" />
-            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-burgundy/30 rounded-br-2xl" />
+            {/* Corner ornaments */}
+            <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-burgundy/30 rounded-tl-2xl z-10" />
+            <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-burgundy/30 rounded-tr-2xl z-10" />
+            <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-burgundy/30 rounded-bl-2xl z-10" />
+            <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-burgundy/30 rounded-br-2xl z-10" />
             
             <div className="aspect-[16/10] md:aspect-[16/8] lg:aspect-[16/6]">
               <iframe
@@ -78,6 +98,7 @@ const Location = () => {
           </div>
         </motion.div>
 
+        {/* Venue Info & Button */}
         <motion.div
           className="mt-10 text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -85,9 +106,12 @@ const Location = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <p className="font-display text-2xl text-burgundy mb-2">
-            Vinterra Estate
-          </p>
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <MapPin className="w-5 h-5 text-gold" strokeWidth={1.5} />
+            <p className="font-display text-2xl text-burgundy">
+              Vinterra Estate
+            </p>
+          </div>
           <p className="font-sans-wedding text-sm tracking-[0.15em] uppercase text-burgundy/60 mb-6">
             2000 Silverado Trail · Napa, California
           </p>
@@ -106,26 +130,14 @@ const Location = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
+                <Navigation className="w-5 h-5" />
                 Get Directions
               </a>
             </Button>
           </motion.div>
         </motion.div>
 
+        {/* Bottom flourish */}
         <motion.div
           className="flex items-center justify-center gap-4 mt-8"
           initial={{ opacity: 0 }}
@@ -133,9 +145,9 @@ const Location = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          <div className="h-px w-12 bg-gradient-to-r from-transparent to-burgundy/20" />
-          <div className="w-1.5 h-1.5 rotate-45 bg-burgundy/30" />
-          <div className="h-px w-12 bg-gradient-to-l from-transparent to-burgundy/20" />
+          <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/30" />
+          <div className="w-2 h-2 rotate-45 bg-gold/50" />
+          <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/30" />
         </motion.div>
       </motion.div>
     </section>

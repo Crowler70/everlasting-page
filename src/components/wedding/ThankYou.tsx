@@ -1,31 +1,131 @@
 import { motion } from "framer-motion";
+import { Heart, Sparkles } from "lucide-react";
 
 const ThankYou = () => {
   return (
-    <section className="py-12 px-6 bg-cream flex items-center justify-center">
+    <section className="py-12 px-6 bg-cream overflow-hidden">
       <motion.div
-        className="relative max-w-sm mx-auto text-center"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="max-w-lg mx-auto"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.8 }}
       >
-        {/* Decorative border card */}
-        <div className="bg-burgundy rounded-sm p-1">
-          <div className="bg-cream rounded-sm p-10 md:p-14" style={{
-            clipPath: "polygon(0% 5%, 2% 0%, 5% 3%, 8% 0%, 11% 3%, 14% 0%, 17% 3%, 20% 0%, 23% 3%, 26% 0%, 29% 3%, 32% 0%, 35% 3%, 38% 0%, 41% 3%, 44% 0%, 47% 3%, 50% 0%, 53% 3%, 56% 0%, 59% 3%, 62% 0%, 65% 3%, 68% 0%, 71% 3%, 74% 0%, 77% 3%, 80% 0%, 83% 3%, 86% 0%, 89% 3%, 92% 0%, 95% 3%, 98% 0%, 100% 5%, 100% 95%, 98% 100%, 95% 97%, 92% 100%, 89% 97%, 86% 100%, 83% 97%, 80% 100%, 77% 97%, 74% 100%, 71% 97%, 68% 100%, 65% 97%, 62% 100%, 59% 97%, 56% 100%, 53% 97%, 50% 100%, 47% 97%, 44% 100%, 41% 97%, 38% 100%, 35% 97%, 32% 100%, 29% 97%, 26% 100%, 23% 97%, 20% 100%, 17% 97%, 14% 100%, 11% 97%, 8% 100%, 5% 97%, 2% 100%, 0% 95%)"
-          }}>
-            <h2 className="font-display text-3xl md:text-4xl text-burgundy mb-4">
-              Thank You
-            </h2>
-            <p className="font-body text-base text-burgundy/70 mb-6">
-              For joining us on this special day. Your presence is the best gift we could receive.
-            </p>
-            <p className="font-display text-2xl text-burgundy">
-              Grace & Thomas
-            </p>
-          </div>
-        </div>
+        {/* Thank You Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* Decorative card with wavy edges */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            {/* Outer burgundy border */}
+            <div className="bg-burgundy rounded-sm p-[3px]">
+              {/* Inner content with wavy clip */}
+              <div 
+                className="bg-cream relative overflow-hidden px-8 py-12 md:px-12 md:py-14"
+                style={{
+                  clipPath: "polygon(0% 3%, 3% 0%, 7% 2%, 12% 0%, 17% 2%, 22% 0%, 27% 2%, 32% 0%, 37% 2%, 42% 0%, 47% 2%, 52% 0%, 57% 2%, 62% 0%, 67% 2%, 72% 0%, 77% 2%, 82% 0%, 87% 2%, 92% 0%, 97% 2%, 100% 3%, 100% 97%, 97% 100%, 92% 98%, 87% 100%, 82% 98%, 77% 100%, 72% 98%, 67% 100%, 62% 98%, 57% 100%, 52% 98%, 47% 100%, 42% 98%, 37% 100%, 32% 98%, 27% 100%, 22% 98%, 17% 100%, 12% 98%, 7% 100%, 3% 98%, 0% 100%, 0% 97%)"
+                }}
+              >
+                {/* Corner decorations */}
+                <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2 border-gold/30 rounded-tl-lg" />
+                <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2 border-gold/30 rounded-tr-lg" />
+                <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2 border-gold/30 rounded-bl-lg" />
+                <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2 border-gold/30 rounded-br-lg" />
+
+                {/* Content */}
+                <div className="text-center">
+                  {/* Heart icon */}
+                  <motion.div
+                    className="flex justify-center mb-6"
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.5 }}
+                  >
+                    <div className="relative">
+                      <motion.div
+                        className="absolute inset-0 bg-gold/20 rounded-full blur-xl"
+                        animate={{ scale: [1, 1.2, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                      <Heart className="w-12 h-12 text-gold relative z-10" fill="currentColor" strokeWidth={1} />
+                    </div>
+                  </motion.div>
+
+                  {/* Title */}
+                  <motion.h2
+                    className="font-display text-4xl md:text-5xl text-burgundy mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.6 }}
+                  >
+                    Thank You
+                  </motion.h2>
+
+                  {/* Gold divider */}
+                  <motion.div
+                    className="flex items-center justify-center gap-3 mb-6"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.7 }}
+                  >
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                    <Sparkles className="w-4 h-4 text-gold" />
+                    <div className="h-px w-12 bg-gradient-to-l from-transparent via-gold to-transparent" />
+                  </motion.div>
+
+                  {/* Message */}
+                  <motion.p
+                    className="font-body text-lg text-burgundy/80 max-w-xs mx-auto mb-8 leading-relaxed"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                  >
+                    For joining us on this special day. Your presence is the best gift we could receive.
+                  </motion.p>
+
+                  {/* Names */}
+                  <motion.p
+                    className="font-display text-2xl md:text-3xl text-burgundy"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                  >
+                    Grace & Thomas
+                  </motion.p>
+                </div>
+
+                {/* Bottom flourish */}
+                <motion.div
+                  className="flex items-center justify-center mt-8"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1 }}
+                >
+                  <div className="h-px w-10 bg-gradient-to-r from-transparent to-gold/30" />
+                  <svg className="w-4 h-4 text-gold/50 mx-2" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" stroke="currentColor" strokeWidth="1" />
+                  </svg>
+                  <div className="h-px w-10 bg-gradient-to-l from-transparent to-gold/30" />
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </section>
   );
