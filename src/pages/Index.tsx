@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CurtainHero from "@/components/wedding/CurtainHero";
 import NamesHero from "@/components/wedding/NamesHero";
+import CeremonyDate from "@/components/wedding/CeremonyDate";
 import Countdown from "@/components/wedding/Countdown";
 import Venue from "@/components/wedding/Venue";
 import MenuCard from "@/components/wedding/MenuCard";
@@ -17,6 +18,7 @@ const Index = () => {
     <div className="min-h-screen bg-cream overflow-x-hidden">
       <CurtainHero isOpen={curtainOpen} onOpen={() => setCurtainOpen(true)} />
       <NamesHero />
+      <CeremonyDate />
       <Countdown />
       <Venue />
       <MenuCard />
