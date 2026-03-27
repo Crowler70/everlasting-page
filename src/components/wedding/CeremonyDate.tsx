@@ -37,7 +37,7 @@ const CeremonyDate = ({ onReveal }: { onReveal?: () => void }) => {
             </motion.p>
 
             <motion.button
-              onClick={() => setRevealed(true)}
+              onClick={handleReveal}
               className="relative px-10 py-4 rounded-full border-2 border-burgundy/30 bg-cream hover:bg-burgundy/5 transition-colors group cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
