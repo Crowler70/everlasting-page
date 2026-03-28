@@ -13,4 +13,4 @@ export const WEDDING_VENUE = {
   city: "Napa, California",
 };
 
-export const COUPLE_NAMES = "Grace & Thomas";
+export const COUPLE_NAMES = "Jobair & Muntaka";

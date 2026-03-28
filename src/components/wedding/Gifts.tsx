@@ -134,7 +134,7 @@ const Gifts = () => {
                   <div className="h-px w-8 bg-gradient-to-l from-transparent to-gold/30" />
                 </div>
                 <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
-                  Account Holder: Grace & Thomas
+                  Account Holder: Jobair & Muntaka
                 </p>
                 <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
                   Routing Number: XXXXXXXX
@@ -143,7 +143,7 @@ const Gifts = () => {
                   Account Number: XXXXXXXXX
                 </p>
                 <p className="font-sans-wedding text-[10px] tracking-[0.2em] uppercase text-burgundy/60">
-                  Reference: Grace & Thomas Wedding
+                  Reference: Jobair & Muntaka Wedding
                 </p>
               </motion.div>
             )}
