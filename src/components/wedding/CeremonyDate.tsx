@@ -87,9 +87,9 @@ const CeremonyDate = ({ onReveal }: { onReveal?: () => void }) => {
                 />
                 
                 {/* Content */}
-                <div className="relative z-10 text-center px-6">
-                  <Sparkles className="w-6 h-6 text-gold mx-auto mb-3" />
-                  <span className="font-display text-burgundy text-lg md:text-xl leading-tight block">
+                <div className="relative z-10 flex flex-col items-center justify-center px-4">
+                  <Sparkles className="w-6 h-6 text-gold mb-2" />
+                  <span className="font-display text-burgundy text-lg md:text-xl leading-tight text-center">
                     Click here to<br />reveal the date
                   </span>
                 </div>
