@@ -69,15 +69,9 @@ const CeremonyDate = ({ onReveal }: { onReveal?: () => void }) => {
               />
               
               {/* Main button */}
-              <div className="relative w-64 h-64 rounded-full bg-cream border-2 border-burgundy/20 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
+              <div className="relative w-32 h-32 rounded-full bg-cream border-2 border-burgundy/20 shadow-2xl flex flex-col items-center justify-center overflow-hidden">
                 {/* Inner gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-burgundy/5 via-transparent to-gold/10" />
-                
-                {/* Decorative corner accents */}
-                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-gold/30 rounded-tl-full" />
-                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-gold/30 rounded-tr-full" />
-                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-gold/30 rounded-bl-full" />
-                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-gold/30 rounded-br-full" />
                 
                 {/* Pulsing ring */}
                 <motion.span
@@ -87,9 +81,8 @@ const CeremonyDate = ({ onReveal }: { onReveal?: () => void }) => {
                 />
                 
                 {/* Content */}
-                <div className="relative z-10 flex flex-col items-center justify-center px-4">
-                  <Sparkles className="w-6 h-6 text-gold mb-2" />
-                  <span className="font-display text-burgundy text-lg md:text-xl leading-tight text-center">
+                <div className="relative z-10 flex flex-col items-center justify-center px-2">
+                  <span className="font-display text-burgundy text-xs md:text-sm leading-tight text-center">
                     Click here to<br />reveal the date
                   </span>
                 </div>
